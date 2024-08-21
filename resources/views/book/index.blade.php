@@ -28,7 +28,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Sno.</th>
         <th scope="col">Book Name</th>
         <th scope="col">Book Description</th>
         <th scope="col">Book Image</th>
@@ -36,16 +36,20 @@
       </tr>
     </thead>
     <tbody>
+      @foreach ($books as $book)
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <th scope="row">{{$book->id}}</th>
+        <td>{{$book->bookname}}</td>
+        <td>{{$book->bookdesc}}</td>
         <td>
-          <a href="" class="btn btn-primary">Edit</a>
+          <img src="bookimages/{{ $book->bookimg }}" class="rounded-circle" width="50" height="50" alt="">
+        </td>
+        <td>
+          <a href="/books/{{$book->id}}" class="btn btn-primary">Edit</a>
           <a href="" class="btn btn-danger">Delete</a>
         </td>
       </tr>
+      @endforeach
     </tbody>
   </table>
 </div>

@@ -10,7 +10,8 @@ class BookController extends Controller
 {
     public function index ()
     {
-        return view('book.index');
+        $books = Books::get();
+        return view('book.index',['books'=> $books]);
     }
 
     public function create()
