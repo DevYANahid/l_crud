@@ -49,7 +49,7 @@
           <a href="" class="btn btn-danger">Delete</a>
         </td>
       </tr>
-      @endforea
+      @endforeach
     </tbody>
   </table>
 </div>
