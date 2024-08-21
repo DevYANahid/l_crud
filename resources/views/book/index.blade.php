@@ -45,8 +45,8 @@
           <img src="bookimages/{{ $book->bookimg }}" class="rounded-circle" width="50" height="50" alt="">
         </td>
         <td>
-          <a href="/books/{{$book->id}}" class="btn btn-primary">Edit</a>
-          <a href="" class="btn btn-danger">Delete</a>
+          <a href="book/{{$book->id}}/edit" class="btn btn-primary">Edit</a>
+          <a href="book/{{$book->id}}/delete" class="btn btn-danger">Delete</a>
         </td>
       </tr>
       @endforeach
