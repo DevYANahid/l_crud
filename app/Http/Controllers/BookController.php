@@ -33,7 +33,9 @@ class BookController extends Controller
 
         $books = new Books;
 
-       
+       $books->bookimg = $imageName ;
+       $books->bookname = $request->bookname;
+       $books->bookdesc = $request->bookdesc;
 
         $books->save();
         return back()->withSuccess("Book Listed Successfuly!!!!!!!!!");
